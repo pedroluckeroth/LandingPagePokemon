@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CardMasters Grand Opening</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <main>
+        <section id="showcase" class="section showcase-section">
+            <div class="container showcase-content">
+                
+                <div class="image-showcase">
+                    <img id="imagem-principal" src="" alt="Arte CardMasters" class="product-image">
+                </div>
+
+                <div class="text-column-wrapper">
+                    <div class="text-showcase">
+                        <p id="random-text"></p>
+                    </div>
+
+                    <div class="promo-wrapper"> <div class="promo-container">
+            <p class="promo-text">The first 20 people to attend get a free booster!!</p>
+        </div>
+    </div>
+
+                    <div class="address-container">
+                        <p class="address-text">Address: 3251 N Federal Hwy, Boca Raton, FL</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; CardMasters⭐</p>
+            <div class="social-links">
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const listaDeImagens = [
+            'imagens/coliseum(Flyer).png',
+            'imagens/gm2.png',
+            'imagens/gm5.png',
+            'imagens/melo1.jpg',
+            'imagens/melo2.png'
+        ];
+        const indiceAleatorioImg = Math.floor(Math.random() * listaDeImagens.length);
+        const imagemSorteada = listaDeImagens[indiceAleatorioImg];
+        const elementoImagem = document.getElementById('imagem-principal');
+        elementoImagem.src = imagemSorteada;
+
+        const listaDeTextos = [
+            "Boca Raton’s newest Pokémon TCG destination is finally here!\n \nJoin us for the opening of our brand-new card shop featuring sealed products, singles, accessories, and exclusive launch-day deals.\n \nBring your friends, trade, play, and be part of the local Pokémon community from day one!\n \n  📍 Boca Raton, FL\n \n📅 November 21st",
+            "A brand-new Pokémon Card Shop opens November 21st, and we're kicking things off with giveaways, specials, rare cards, and a place for trainers to battle and trade!\n \nDon’t miss out — the next big spot for collectors and players is opening right here in Boca!\n \n📍 Boca Raton, Florida",
+            "Pokémon Card Shop Grand Opening – Nov 21 • Boca Raton, FL!\n \nSealed products, singles, trades, events & giveaways.\n \nDon’t miss the launch day specials — see you there, Trainers! ⚡"
+        ];
+        
+        const indiceAleatorioTexto = Math.floor(Math.random() * listaDeTextos.length);
+        const textoSorteado = listaDeTextos[indiceAleatorioTexto];
+        const elementoTexto = document.getElementById('random-text');
+        elementoTexto.innerText = textoSorteado;
+    </script>
+    
+</body>
+</html>
