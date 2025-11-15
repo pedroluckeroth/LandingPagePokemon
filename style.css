@@ -205,3 +205,29 @@ main {
     font-weight: 600;
 }
 
+@media (max-width: 768px) {
+    .showcase-content {
+        flex-direction: column; 
+        gap: 20px;
+        justify-content: flex-start; 
+        padding-top: 20px;
+        overflow-y: auto; 
+        height: auto;
+        padding-bottom: 40px;
+        align-items:center;
+    }
+
+    html, body {
+        overflow: auto;
+    }
+
+    .image-showcase, .text-column-wrapper, .text-showcase, .promo-wrapper, .address-container {
+        max-width: 100%; 
+        width: 100%;
+        max-height: none; 
+    }
+
+    .image-showcase {
+        flex-basis: auto; 
+    }
+}
